@@ -55,7 +55,38 @@ namespace Chapter1
 
             Console.WriteLine($"The total sum2 is {sum2}");
 
+            DayOfWeek currentDay = DayOfWeek.Thursday;
+            PrintMessageOfTheDay(currentDay);
+        }
 
+        // Here our method accepts an enum type as a parameter
+        static void PrintMessageOfTheDay(DayOfWeek day)
+        {
+            // Performing different operations based on the value of the enum variable
+            switch (day)
+            {
+                case DayOfWeek.Monday:
+                    Console.WriteLine("Brace yourself. The week only started.");
+                    break;
+                case DayOfWeek.Tuesday:
+                    Console.WriteLine("Still many days to go...");
+                    break;
+                case DayOfWeek.Wednesday:
+                    Console.WriteLine("Halfway through. Great!");
+                    break;
+                case DayOfWeek.Thursday:
+                    Console.WriteLine("Just one more day left!");
+                    break;
+                case DayOfWeek.Friday:
+                    Console.WriteLine("Ohooo! Party tonight!");
+                    break;
+                case DayOfWeek.Saturday:
+                    Console.WriteLine("Time to enjoy the weekend.");
+                    break;
+                case DayOfWeek.Sunday:
+                    Console.WriteLine("The last day...");
+                    break;
+            }
         }
     }
 }
