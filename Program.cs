@@ -1,11 +1,13 @@
 ﻿using System;
 
-namespace FirstProgram
-{
-    class VariableDataTypes
+
+namespace Chapter1
+{ 
+    class FirstProgram
     {
         static void Main(string[] args)
         {
+            //Variable and Types
             int age = 10;
             string name = "Student123";
             Console.WriteLine($"Student {name} has age {age}");
@@ -27,6 +29,32 @@ namespace FirstProgram
             int secondNumer = 30;
             Console.WriteLine($"firstNumber is of type {firstNumber.GetType()}");
             Console.WriteLine($"secondNumber is of type {secondNumer.GetType()}");
+
+
+            // Type Cast
+            byte age2 = 24;
+            int in10Years = age2 + 10;
+            byte in10YearsByte = (byte)(age2 + 10);
+            Console.WriteLine(in10Years);
+            Console.WriteLine(in10YearsByte);
+
+            //For Loop
+            int[] points = new int[] { 1, 2, 3, 4, 5, 6 };
+            int sum = 0;
+            for (int i = 0; i < points.Length; i++)
+            {
+                sum += points[i];
+            }
+
+            Console.WriteLine($"The total sum is {sum}");
+            int sum2 = 0;
+            foreach (int point in points)
+            {
+                sum2 += point;
+            }
+
+            Console.WriteLine($"The total sum2 is {sum2}");
+
 
         }
     }
